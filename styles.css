@@ -53,7 +53,7 @@ nav ul li {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/R.jpg') no-repeat center center/cover;
+    background: url('Images/background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
