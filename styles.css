@@ -45,6 +45,15 @@ nav ul {
   gap: 20px;
 }
 
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  padding: 10px;
+  display: block;
+}
+
 .cart {
   position: relative;
 }
