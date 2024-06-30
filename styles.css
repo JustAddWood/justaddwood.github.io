@@ -53,7 +53,7 @@ nav ul li {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/braai--meat.jpg') no-repeat center center/cover;
+    background: url('images/braai--meat.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,4 +76,47 @@ nav ul li {
 .hero-text p {
     font-size: 1.2em;
     margin: 10px 0;
+}
+
+/* Product Section */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.products h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1em;
+    color: #888;
 }
