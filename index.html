@@ -138,7 +138,27 @@
     });
 });
 
+const heroSection = document.querySelector('.hero');
+let mouseX = 0;
+let mouseY = 0;
 
+heroSection.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    moveBackground();
+});
+
+function moveBackground() {
+    const moveX = (mouseX / window.innerWidth) * 10 - 5;
+    const moveY = (mouseY / window.innerHeight) * 10 - 5;
+    const zoom = 1.05; // Zoom factor
+
+    heroSection.style.backgroundPosition = `${moveX}px ${moveY}px`;
+    heroSection.style.backgroundSize = `calc(100% * ${zoom})`;
+
+    // Fade in/out effect using overlay
+    heroSection.querySelector(':before').style.opacity = 0.4 + (Math.abs(moveX) + Math.abs(moveY)) / 100;
+}
     </script>
 </body>
 </html>
