@@ -267,7 +267,7 @@ nav ul li a:hover {
 }
 
 /* Terms of Service Section */
-.tos {
+.terms {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
@@ -276,12 +276,12 @@ nav ul li a:hover {
     margin: 20px;
 }
 
-.tos h2 {
+.terms h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.tos p {
+.terms p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #555;
