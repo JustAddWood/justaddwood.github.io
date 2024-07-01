@@ -288,6 +288,10 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.terms>a {
+    color: black;
+}
+
 /* Footer */
 footer {
     text-align: center;
