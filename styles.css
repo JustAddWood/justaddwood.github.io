@@ -318,12 +318,10 @@ footer p {
     outline: none;
     cursor: pointer;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 50%; /* Make it a circle */
     font-size: 1.5em;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    width: 20px;
-    height: auto;
 }
 
 #back-to-top-btn:hover {
