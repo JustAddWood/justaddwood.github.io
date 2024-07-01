@@ -193,7 +193,7 @@ nav ul li a:hover {
 
 /* About Section */
 .about-hero {
-    height: 80vh; /* Adjust height as needed */
+    height: 85vh; /* Adjust height as needed */
     background: url('Images/background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
