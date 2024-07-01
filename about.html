@@ -5,61 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Just Add Wood</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Adding a script file for highlighting the active page -->
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="Images/logo/Logo.png" alt="Just Add Wood Logo">
+            <a href="index.html"><img src="Images/logo/Logo.png" alt="Just Add Wood Logo"></a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="index.html#products">Products</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero about-hero">
+
+    <section class="hero" style="background: url('Images/background.png') no-repeat center center/cover;">
         <div class="hero-text">
-            <img src="Images/logo/Logo.png" alt="Just Add Wood Logo">
-            <h1>About Us</h1>
-            <p>Learn more about Just Add Wood and our mission.</p>
+            <h1>About Just Add Wood</h1>
+            <p>Welcome to Just Add Wood, where we bring you the finest in high-end Braaiers.</p>
+            <p>Learn about our commitment to quality, craftsmanship, and customer satisfaction.</p>
         </div>
     </section>
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Just Add Wood is dedicated to providing the finest high-end Braaiers for the discerning South African. Our mission is to enhance your braai experience with top-quality products designed to meet the highest standards of luxury and performance.</p>
-        <p>Founded by a team of passionate braai enthusiasts, we understand the importance of tradition, quality, and style. Our Braaiers are crafted with precision and care, ensuring that each product not only meets but exceeds your expectations.</p>
-        <p>We believe that a braai is more than just a meal; it's a celebration of culture, community, and craftsmanship. Join us in experiencing the luxury of high-end Braaiers and make your next braai an unforgettable event.</p>
-    </section>
+
     <section class="socials">
         <h2>Follow Us on Social Media</h2>
         <div class="social-links">
-            <a href="https://twitter.com/JustAddWoods" target="_blank"><img src="Images/social_icons/twitter.png" alt="Twitter"></a>
-            <a href="https://facebook.com/JustAddWoods" target="_blank"><img src="Images/social_icons/facebook.png" alt="Facebook"></a>
-            <a href="https://instagram.com/JustAddWoods" target="_blank"><img src="Images/social_icons/instagram.png" alt="Instagram"></a>
-            <a href="https://youtube.com/JustAddWoods" target="_blank"><img src="Images/social_icons/youtube.png" alt="YouTube"></a>
+            <a href="https://twitter.com/JustAddWood" target="_blank"><img src="Images/social_icons/twitter.png" alt="Twitter"></a>
+            <a href="https://facebook.com/JustAddWood" target="_blank"><img src="Images/social_icons/facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com/JustAddWood" target="_blank"><img src="Images/social_icons/instagram.png" alt="Instagram"></a>
+            <a href="https://youtube.com/JustAddWood" target="_blank"><img src="Images/social_icons/youtube.png" alt="YouTube"></a>
         </div>
     </section>
-    <section class="tos">
+
+    <section class="terms">
         <h2>Terms of Service</h2>
-        <p>Read our <a href="#">Terms of Service</a> to understand our policies and guidelines.</p>
+        <p>Our Terms of Service outline our policies and terms of use for using our products and services.</p>
+        <a href="terms.html">Read Our Terms of Service</a>
     </section>
+
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentLocation = location.href;
-            const menuItem = document.querySelectorAll('nav ul li a');
-            const menuLength = menuItem.length;
-            for (let i = 0; i < menuLength; i++) {
-                if (menuItem[i].href === currentLocation) {
-                    menuItem[i].classList.add('active');
-                }
-            }
-        });
-    </script>
 </body>
 </html>
