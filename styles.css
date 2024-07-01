@@ -69,17 +69,15 @@ nav ul li a:hover {
     justify-content: center;
     color: white;
     text-align: center;
-    overflow: hidden; /* Ensure the background image does not overflow */
-    position: relative; /* Needed for absolute positioning of overlay */
-    background-size: 120%; /* Adjust to cover slightly more than 100% */
-    background-position: center; /* Center the background image */
+    padding-top: 70px; /* Added padding to ensure content does not overlap header */
 }
 
 .hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
     position: relative; /* Ensure text is positioned correctly */
     z-index: 1; /* Ensure text is above the background */
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
 }
 
 .hero::before {
@@ -195,8 +193,7 @@ nav ul li a:hover {
 
 /* About Section */
 .about-hero {
-    height: 80vh; /* Adjust height as needed */
-    width: 80vw;
+    height: 85vh; /* Adjust height as needed */
     background: url('Images/background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
