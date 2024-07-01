@@ -115,6 +115,33 @@
                 }
             });
         });
+
+         // JavaScript for snapping behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSection = document.querySelector('.about-hero');
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const snapThreshold = headerHeight / 3; // Adjust as needed
+
+            let isSnapping = false;
+
+            window.addEventListener('scroll', function() {
+                if (!isSnapping) {
+                    const distanceToTop = heroSection.getBoundingClientRect().top;
+
+                    if (distanceToTop <= snapThreshold) {
+                        isSnapping = true;
+                        window.scrollTo({
+                            top: heroSection.offsetTop - headerHeight,
+                            behavior: 'smooth'
+                        });
+
+                        setTimeout(function() {
+                            isSnapping = false;
+                        }, 500); // Adjust delay if necessary
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
