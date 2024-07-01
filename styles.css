@@ -317,9 +317,9 @@ footer p {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 20px; /* Increase padding for better circular appearance */
+    padding: 15px; /* Adjusted padding for smaller size */
     border-radius: 50%; /* Make it a circle */
-    font-size: 1.5em;
+    font-size: 1.2em; /* Adjusted font size */
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
@@ -330,6 +330,5 @@ footer p {
 
 #back-to-top-btn::before {
     content: '\25B2'; /* Unicode for up arrow */
-    font-size: 1.5em; /* Adjust size of arrow */
+    font-size: 0.8em; /* Adjusted smaller size for the arrow */
 }
-
