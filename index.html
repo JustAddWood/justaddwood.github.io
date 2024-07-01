@@ -13,7 +13,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -22,29 +22,27 @@
     </header>
     <section class="hero" id="home">
         <div class="hero-text">
-            <div class="logo-frontpage">
-                <img src="Images/logo/Logo.png" alt="Just Add Woods Logo">
-            </div>
+            <img src="Images/logo/Logo.png" alt="Just Add Woods Logo">
             <p>Experience the Luxury of High-End Braaiers</p>
             <p>Designed for the Discerning South African</p>
         </div>
     </section>
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>Sign up to get your custom Braaier</p>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <p>Get in touch to learn more or place an order for your custom Braaier.</p>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <select name="product-interest" required>
-                <option value="" disabled selected>Select Product Interest</option>
-                <option value="Product1">Product 1</option>
-                <option value="Product2">Product 2</option>
-                <option value="Product3">Product 3</option>
-                <option value="Product4">Product 4</option>
+            <select name="product" required>
+                <option value="" disabled selected>Select Product of Interest</option>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+                <option value="product4">Product 4</option>
             </select>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
     <section class="products" id="products">
@@ -92,5 +90,6 @@
             </div>
         </div>
     </section>
+    <script src="scripts.js"></script>
 </body>
 </html>
