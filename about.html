@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="index.html#home">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="index.html#products">Products</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
@@ -33,6 +33,17 @@
         <p>Founded by a team of passionate braai enthusiasts, we understand the importance of tradition, quality, and style. Our Braaiers are crafted with precision and care, ensuring that each product not only meets but exceeds your expectations.</p>
         <p>We believe that a braai is more than just a meal; it's a celebration of culture, community, and craftsmanship. Join us in experiencing the luxury of high-end Braaiers and make your next braai an unforgettable event.</p>
     </section>
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentLocation = location.href;
+            const menuItem = document.querySelectorAll('nav ul li a');
+            const menuLength = menuItem.length;
+            for (let i = 0; i < menuLength; i++) {
+                if (menuItem[i].href === currentLocation) {
+                    menuItem[i].classList.add('active');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
