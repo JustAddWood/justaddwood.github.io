@@ -92,6 +92,7 @@
             </div>
         </div>
     </section>
+    <button id="back-to-top-btn" title="Back to Top">&uarr;</button>
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
     </footer>
@@ -116,39 +117,27 @@
             });
         });
 
-         // JavaScript for snapping behavior
-        document.addEventListener('DOMContentLoaded', function() {
-    const heroSection = document.querySelector('.hero');
+         document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('back-to-top-btn');
 
-    if (!heroSection) {
-        console.error('Hero section not found in the document.');
-        return;
-    }
-
-    const headerHeight = document.querySelector('header').offsetHeight;
-    const snapThreshold = headerHeight / 3; // Adjust as needed
-
-    let isSnapping = false;
-
+    // Show or hide the button based on scroll position
     window.addEventListener('scroll', function() {
-        if (!isSnapping) {
-            const distanceToTop = heroSection.getBoundingClientRect().top;
-
-            // Check if user is at the top of the page or has scrolled further down
-            if (window.scrollY === 0 || distanceToTop <= snapThreshold) {
-                isSnapping = true;
-                window.scrollTo({
-                    top: heroSection.offsetTop - headerHeight,
-                    behavior: 'smooth'
-                });
-
-                setTimeout(function() {
-                    isSnapping = false;
-                }, 500); // Adjust delay if necessary
-            }
+        if (window.scrollY > 300) { // Adjust scroll position threshold as needed
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
         }
     });
+
+    // Scroll to top when the button is clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
+
 
     </script>
 </body>
