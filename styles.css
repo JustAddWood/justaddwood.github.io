@@ -63,19 +63,19 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/background.png') no-repeat center center/cover;
+    background: url('path/to/your/background-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    padding-top: 70px; /* Added padding to ensure content does not overlap header */
+    overflow: hidden; /* Ensure the background image does not overflow */
+    position: relative; /* Needed for absolute positioning of overlay */
+    background-size: calc(100% + 20px); /* Enlarge background image slightly */
+    background-position: center; /* Center the background image */
 }
 
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 5px;
     position: relative; /* Ensure text is positioned correctly */
     z-index: 1; /* Ensure text is above the background */
 }
