@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="Images/logo/Logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Add Wood</title>
+    <meta name="description" content="Discover premium, custom-made Braaiers perfect for South African BBQ enthusiasts. Just Add Woods offers top-quality craftsmanship and luxury designs.">
+    <meta name="keywords" content="Braaiers, South African BBQ, custom Braaiers, high-end Braaiers, luxury BBQ, Just Add Woods">
+    <meta name="author" content="Just Add Woods">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://justaddwood.co.za/">
+    <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://justaddwood.co.za/">
+<meta property="og:title" content="Just Add Woods - High-End Braaiers">
+<meta property="og:description" content="Discover premium, custom-made Braaiers perfect for South African BBQ enthusiasts. Just Add Woods offers top-quality craftsmanship and luxury designs.">
+<meta property="og:image" content="https://justaddwood.co.za/images/hero-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://justaddwood.co.za/">
+<meta property="twitter:title" content="Just Add Woods - High-End Braaiers">
+<meta property="twitter:description" content="Discover premium, custom-made Braaiers perfect for South African BBQ enthusiasts. Just Add Woods offers top-quality craftsmanship and luxury designs.">
+<meta property="twitter:image" content="https://justaddwood.co.za/images/hero-image.jpg">
+<!-- Dublin Core Metadata -->
+<meta name="DC.title" content="Just Add Woods - High-End Braaiers">
+<meta name="DC.subject" content="Custom Braaiers, South African BBQ, High-End BBQ Equipment">
+<meta name="DC.description" content="Discover premium, custom-made Braaiers perfect for South African BBQ enthusiasts. Just Add Woods offers top-quality craftsmanship and luxury designs.">
+
+<!-- Verification Tags -->
+<meta name="google-site-verification" content="your-google-site-verification-code">
+<meta name="msvalidate.01" content="your-bing-site-verification-code">
+
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script> <!-- Include scripts.js -->
 </head>
@@ -30,6 +58,12 @@
             <p>Designed for the Discerning South African</p>
         </div>
     </section>
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+        <button id="acceptCookies">Accept All</button>
+        <button id="declineCookies">No Thanks</button>
+        <script defer src="cookie-consent.js"></script>
+    </div>
     <section class="categories" id="categories">
         <h2>Our Categories</h2>
         <div class="category-grid">
@@ -140,21 +174,21 @@
 
     // Scroll to top when the button is clicked
     backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    const contactBtn = document.getElementById('contact-us-btn');
-    const contactSlideout = document.getElementById('contact-us-slideout');
+    document.addEventListener('DOMContentLoaded', function() {
+            const contactBtn = document.getElementById('contact-us-btn');
+            const contactSlideout = document.getElementById('contact-us-slideout');
 
-    contactBtn.addEventListener('click', function() {
-        contactSlideout.classList.toggle('open');
+            contactBtn.addEventListener('click', function() {
+                contactSlideout.classList.toggle('open');
+        });
     });
-});
 
     </script>
 

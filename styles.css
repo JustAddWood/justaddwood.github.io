@@ -434,3 +434,34 @@ footer p {
 #contact-us-slideout.open {
     left: 0;
 }
+
+#cookieConsent {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    z-index: 1000;
+}
+
+#cookieConsent p {
+    margin: 0;
+    padding-right: 10px;
+    display: inline;
+}
+
+#cookieConsent button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cookieConsent button#declineCookies {
+    background-color: #fff;
+}
