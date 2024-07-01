@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch to learn more or place an order for your custom Braaier.</p>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required><br><br>
+            <select name="product" required>
+                <option value="" disabled selected>Select Product of Interest</option>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+                <option value="product4">Product 4</option>
+            </select><br><br>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>

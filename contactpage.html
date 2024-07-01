@@ -19,7 +19,7 @@
                 <li><a href="terms.html" class="active">Terms of Service</a></li>
                 <li><a href="index.html#categories">Category</a></li>
                 <li><a href="index.html#products">Products</a></li>
-                <li><a href="contactpage.html">Contact</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -30,31 +30,28 @@
             <p>Learn more about Just Add Wood and our mission.</p>
         </div>
     </section>
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Just Add Wood is dedicated to providing the finest high-end Braaiers for the discerning South African. Our mission is to enhance your braai experience with top-quality products designed to meet the highest standards of luxury and performance.</p>
-        <p>Founded by a team of passionate braai enthusiasts, we understand the importance of tradition, quality, and style. Our Braaiers are crafted with precision and care, ensuring that each product not only meets but exceeds your expectations.</p>
-        <p>We believe that a braai is more than just a meal; it's a celebration of culture, community, and craftsmanship. Join us in experiencing the luxury of high-end Braaiers and make your next braai an unforgettable event.</p>
-    </section>
-    <section class="socials">
-        <h2>Follow Us on Social Media</h2>
-        <div class="social-links">
-            <a href="https://twitter.com/JustAddWoods" target="_blank"><img src="Images/social_icons/twitter.png" alt="Twitter"></a>
-            <a href="https://facebook.com/JustAddWoods" target="_blank"><img src="Images/social_icons/facebook.png" alt="Facebook"></a>
-            <a href="https://instagram.com/JustAddWoods" target="_blank"><img src="Images/social_icons/instagram.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/@justaddwood2024" target="_blank"><img src="Images/social_icons/youtube.png" alt="YouTube"></a>
-        </div>
-    </section>
-    <section class="terms">
-        <h2>Terms of Service</h2>
-        <p>Our Terms of Service outline our policies and terms of use for using our products and services.</p>
-        <a href="terms.html">Read Our Terms of Service</a>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch to learn more or place an order for your custom Braaier.</p>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required><br><br>
+            <select name="product" required>
+                <option value="" disabled selected>Select Product of Interest</option>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+                <option value="product4">Product 4</option>
+            </select><br><br>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
     </section>
     <button id="back-to-top-btn" title="Back to Top">&uarr;</button>
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
     </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const phoneInput = document.getElementById('phone');

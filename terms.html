@@ -17,8 +17,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="terms.html" class="active">Terms of Service</a></li>
+                <li><a href="index.html#categories">Category</a></li>
                 <li><a href="index.html#products">Products</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="contactpage.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -54,9 +55,69 @@
         <h3>Reservation of Rights</h3>
         <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
     </section>
-
+    <button id="back-to-top-btn" title="Back to Top">&uarr;</button>
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneInput = document.getElementById('phone');
+
+            phoneInput.addEventListener('input', function() {
+                const phoneNumber = phoneInput.value;
+
+                const phoneNumberUtil = window.libphonenumber.PhoneNumberUtil.getInstance();
+                try {
+                    const parsedNumber = phoneNumberUtil.parseAndKeepRawInput(phoneNumber, 'ZA'); // 'ZA' for South Africa, adjust as needed
+                    const isValidNumber = phoneNumberUtil.isValidNumber(parsedNumber);
+
+                    phoneInput.setCustomValidity(isValidNumber ? '' : 'Please enter a valid phone number for South Africa');
+                } catch (e) {
+                    phoneInput.setCustomValidity('Invalid phone number format');
+                }
+            });
+        });
+
+         document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Adjust scroll position threshold as needed
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactBtn = document.getElementById('contact-us-btn');
+    const contactSlideout = document.getElementById('contact-us-slideout');
+
+    contactBtn.addEventListener('click', function() {
+        contactSlideout.classList.toggle('open');
+    });
+});
+
+    </script>
+
+<div id="contact-us-btn">
+    <span>Contact Us</span>
+</div>
+
+    <!-- Contact Us Slide-Out Form -->
+    <div id="contact-us-slideout">
+        <iframe src="contact.html" frameborder="0"></iframe>
+    </div>
 </body>
 </html>
