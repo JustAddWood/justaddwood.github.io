@@ -63,7 +63,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/background.png') no-repeat center center/cover;
+    background: url('path/to/your/background-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +71,7 @@ nav ul li a:hover {
     text-align: center;
     overflow: hidden; /* Ensure the background image does not overflow */
     position: relative; /* Needed for absolute positioning of overlay */
-    background-size: calc(100% + 20px); /* Enlarge background image slightly */
+    background-size: 120%; /* Adjust to cover slightly more than 100% */
     background-position: center; /* Center the background image */
 }
 
