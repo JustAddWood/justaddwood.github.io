@@ -312,8 +312,8 @@ footer p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #ffd700;
+    color: black;
     border: none;
     outline: none;
     cursor: pointer;
