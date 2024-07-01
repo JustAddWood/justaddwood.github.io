@@ -118,30 +118,38 @@
 
          // JavaScript for snapping behavior
         document.addEventListener('DOMContentLoaded', function() {
-            const heroSection = document.querySelector('.hero');
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const snapThreshold = headerHeight / 3; // Adjust as needed
+    const heroSection = document.querySelector('.about-hero');
 
-            let isSnapping = false;
+    if (!heroSection) {
+        console.error('Hero section not found in the document.');
+        return;
+    }
 
-            window.addEventListener('scroll', function() {
-                if (!isSnapping) {
-                    const distanceToTop = heroSection.getBoundingClientRect().top;
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const snapThreshold = headerHeight / 3; // Adjust as needed
 
-                    if (distanceToTop <= snapThreshold) {
-                        isSnapping = true;
-                        window.scrollTo({
-                            top: heroSection.offsetTop - headerHeight,
-                            behavior: 'smooth'
-                        });
+    let isSnapping = false;
 
-                        setTimeout(function() {
-                            isSnapping = false;
-                        }, 500); // Adjust delay if necessary
-                    }
-                }
-            });
-        });
+    window.addEventListener('scroll', function() {
+        if (!isSnapping) {
+            const distanceToTop = heroSection.getBoundingClientRect().top;
+
+            // Check if user is at the top of the page or has scrolled further down
+            if (window.scrollY === 0 || distanceToTop <= snapThreshold) {
+                isSnapping = true;
+                window.scrollTo({
+                    top: heroSection.offsetTop - headerHeight,
+                    behavior: 'smooth'
+                });
+
+                setTimeout(function() {
+                    isSnapping = false;
+                }, 500); // Adjust delay if necessary
+            }
+        }
+    });
+});
+
     </script>
 </body>
 </html>
