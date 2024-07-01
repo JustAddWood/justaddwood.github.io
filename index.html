@@ -95,5 +95,26 @@
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
     </footer>
+    <!-- JavaScript for phone number validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.19/libphonenumber-js.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneInput = document.getElementById('phone');
+
+            phoneInput.addEventListener('input', function() {
+                const phoneNumber = phoneInput.value;
+
+                const phoneNumberUtil = window.libphonenumber.PhoneNumberUtil.getInstance();
+                try {
+                    const parsedNumber = phoneNumberUtil.parseAndKeepRawInput(phoneNumber, 'ZA'); // 'ZA' for South Africa, adjust as needed
+                    const isValidNumber = phoneNumberUtil.isValidNumber(parsedNumber);
+
+                    phoneInput.setCustomValidity(isValidNumber ? '' : 'Please enter a valid phone number for South Africa');
+                } catch (e) {
+                    phoneInput.setCustomValidity('Invalid phone number format');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
