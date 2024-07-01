@@ -246,6 +246,26 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
+.socials {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+}
+
 /* Terms of Service Section */
 .tos {
     padding: 50px 20px;
