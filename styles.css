@@ -78,6 +78,8 @@ nav ul li a:hover {
 .hero-text {
     position: relative; /* Ensure text is positioned correctly */
     z-index: 1; /* Ensure text is above the background */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
 }
 
 .hero::before {
