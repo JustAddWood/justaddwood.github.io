@@ -102,7 +102,7 @@ nav ul li {
     align-items: center;
 }
 
-.contact input, .contact textarea {
+.contact input, .contact textarea, .contact select {
     width: 80%;
     max-width: 400px;
     margin-bottom: 15px;
