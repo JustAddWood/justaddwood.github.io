@@ -76,6 +76,20 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 5px;
+    position: relative; /* Ensure text is positioned correctly */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay to create fade effect */
+    z-index: 0; /* Behind everything */
+    pointer-events: none; /* Allow interaction with elements behind */
 }
 
 .hero-text h1 {
