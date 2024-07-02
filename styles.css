@@ -472,3 +472,69 @@ footer p {
 #cookieConsent button#declineCookies {
     background-color: #fff;
 }
+
+.testimonials {
+    text-align: center;
+}
+
+/* Updated Testimonial Styles */
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.testimonial-content {
+    margin-top: 20px;
+}
+
+.testimonial p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.write-review {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.write-review .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.write-review .btn:hover {
+    background-color: #333;
+}
