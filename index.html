@@ -58,11 +58,8 @@
             <p>Designed for the Discerning South African</p>
         </div>
     </section>
-    <div id="cookieConsent">
-        <p>We use cookies to improve your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-        <button id="acceptCookies">Accept All</button>
-        <button id="declineCookies">No Thanks</button>
-        <script defer src="cookie-consent.js"></script>
+    <div id="cookieConsentBanner">
+        <p>This website uses cookies to enhance user experience. <a href="#" onclick="setCookieConsent()">Accept All</a> | <a href="#" onclick="hideCookieBanner()">No Thanks</a></p>
     </div>
     <section class="categories" id="categories">
         <h2>Our Categories</h2>
@@ -200,5 +197,6 @@
     <div id="contact-us-slideout">
         <iframe src="contact.html" frameborder="0"></iframe>
     </div>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>
