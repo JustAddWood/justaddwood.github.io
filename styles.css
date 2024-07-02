@@ -310,7 +310,7 @@ footer p {
 #back-to-top-btn {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     background-color: #ffd700;
     color: black;
