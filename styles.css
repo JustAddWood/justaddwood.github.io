@@ -244,30 +244,37 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
-/* Terms of Service Section */
-.terms {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* General styling for terms and conditions */
+.terms-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.terms h2 {
-    font-size: 2em;
+.terms-content h2 {
+    text-align: center;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
-.terms p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
+.terms-section {
+    margin-bottom: 30px;
 }
 
-.terms>a {
-    color: black;
+.terms-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.terms-section p {
+    margin-bottom: 10px;
+}
+
+.terms-section ul {
+    margin-bottom: 10px;
 }
 
 /* Footer */
