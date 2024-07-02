@@ -475,6 +475,9 @@ footer p {
 
 .testimonials {
     text-align: center;
+    background-color: #ebebeb;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /* Updated Testimonial Styles */
@@ -528,13 +531,14 @@ footer p {
 .write-review .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffd700;
-    color: #000;
+    background-color: #333;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .write-review .btn:hover {
-    background-color: #333;
+    background-color: #ffd700;
+    color: #000;
 }
