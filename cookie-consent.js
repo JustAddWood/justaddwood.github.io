@@ -130,3 +130,36 @@ function setCookie(name, value, days) {
             }
         }
         
+        // Check if the user has already consented to cookies
+        function checkCookieConsent() {
+            // Check if the "userConsent" cookie exists
+            if (getCookie("userConsent") === "Accepted") {
+                hideCookieBanner(); // If cookie exists and is "Accepted", hide the banner
+            }
+        }
+
+        // Function to retrieve a cookie by name
+        function getCookie(name) {
+            const cookieName = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookieArray = decodedCookie.split(';');
+
+            for (let i = 0; i < cookieArray.length; i++) {
+                let cookie = cookieArray[i].trim();
+                if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return "";
+        }
+
+        // Function to hide the cookie consent banner
+        function hideCookieBanner() {
+            const banner = document.getElementById("cookieConsentBanner");
+            if (banner) {
+                banner.style.display = "none"; // Hide the banner element
+            }
+        }
+
+        // Call the function to check cookie consent on page load
+        checkCookieConsent();
