@@ -104,3 +104,12 @@ const declineButton = document.getElementById('declineCookies');
 if (declineButton) {
     declineButton.addEventListener('click', declineCookies);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactBtn = document.getElementById('contact-us-btn');
+    const contactSlideout = document.getElementById('contact-us-slideout');
+
+    contactBtn.addEventListener('click', function() {
+        contactSlideout.classList.toggle('open');
+    });
+});
