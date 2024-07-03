@@ -55,6 +55,27 @@
         <h3>Reservation of Rights</h3>
         <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
     </section>
+    <section id="cookieManagement">
+        <h2>Cookie Management</h2>
+        <p>If you wish to withdraw your consent and delete all cookies set by our website, you can do so by clicking the button below. Please note that deleting cookies may affect your browsing experience on our site.</p>
+        <button id="deleteCookies">Delete All Cookies</button>
+        
+        <script>
+          function deleteAllCookies() {
+            const cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i];
+              const eqPos = cookie.indexOf("=");
+              const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+            }
+            alert("All cookies have been deleted. Please reload the page for the changes to take effect.");
+          }
+      
+          document.getElementById("deleteCookies").addEventListener("click", deleteAllCookies);
+        </script>
+      </section>
+      
     <button id="back-to-top-btn" title="Back to Top">&uarr;</button>
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
