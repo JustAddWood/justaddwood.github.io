@@ -96,27 +96,6 @@
           <p>If you have any questions or concerns about our privacy practices or if you would like to exercise any of your rights under GDPR, please contact us at:</p>
           <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
         </div>
-      </section>      
-      
-    <section id="cookieManagement">
-        <h2>Cookie Management</h2>
-        <p>If you wish to withdraw your consent and delete all cookies set by our website, you can do so by clicking the button below. Please note that deleting cookies may affect your browsing experience on our site.</p>
-        <button id="deleteCookies">Delete All Cookies</button>
-        
-        <script>
-          function deleteAllCookies() {
-            const cookies = document.cookie.split(";");
-            for (let i = 0; i < cookies.length; i++) {
-              const cookie = cookies[i];
-              const eqPos = cookie.indexOf("=");
-              const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-            }
-            alert("All cookies have been deleted. Please reload the page for the changes to take effect.");
-          }
-      
-          document.getElementById("deleteCookies").addEventListener("click", deleteAllCookies);
-        </script>
       </section>
       
     <button id="back-to-top-btn" title="Back to Top">&uarr;</button>
