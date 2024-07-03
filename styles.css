@@ -25,6 +25,10 @@ p {
     color: black;
 }
 
+.hero-para>p {
+    color: black;
+}
+
 header {
     position: fixed;
     top: 0;
