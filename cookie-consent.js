@@ -23,11 +23,6 @@ function getCookie(name) {
     return "";
 }
 
-// Function to delete a cookie by setting its expiration to a past date
-function deleteCookie(name) {
-    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
-
 // Function to handle cookie consent when 'Accept' button is clicked
 function acceptCookies() {
     setCookie("userConsent", "accepted", 365); // Set 'userConsent' cookie for 365 days
@@ -37,7 +32,7 @@ function acceptCookies() {
 
 // Function to handle cookie consent when 'Decline' button is clicked
 function declineCookies() {
-    setCookie("userConsent", "declined", 365); // Set 'userConsent' cookie for 365 days (optional)
+    setCookie("userConsent", "declined", 365); // Set 'userConsent' cookie for 365 days
     hideCookieBanner(); // Hide the cookie consent banner
 }
 
@@ -108,4 +103,4 @@ if (acceptButton) {
 const declineButton = document.getElementById('declineCookies');
 if (declineButton) {
     declineButton.addEventListener('click', declineCookies);
-});
+}
