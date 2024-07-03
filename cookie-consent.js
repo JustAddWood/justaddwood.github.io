@@ -1,47 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const cookieConsent = document.getElementById('cookieConsent');
-    const acceptButton = document.getElementById('acceptCookies');
-    const declineButton = document.getElementById('declineCookies');
-
-    if (!getCookie('userConsent')) {
-        cookieConsent.style.display = 'block';
-    }
-
-    acceptButton.onclick = function () {
-        setCookie('userConsent', 'accepted', 365);
-        cookieConsent.style.display = 'none';
-    };
-
-    declineButton.onclick = function () {
-        setCookie('userConsent', 'declined', 365);
-        cookieConsent.style.display = 'none';
-    };
-
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    function getCookie(name) {
-        const cname = name + "=";
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(cname) == 0) {
-                return c.substring(cname.length, c.length);
-            }
-        }
-        return "";
-    }
-});
-
-// JavaScript for Cookie Management
+// Function to set a cookie with expiration in days
 function setCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -49,6 +6,7 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
+// Function to get the value of a cookie by name
 function getCookie(name) {
     const cname = name + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -65,107 +23,89 @@ function getCookie(name) {
     return "";
 }
 
+// Function to delete a cookie by setting its expiration to a past date
 function deleteCookie(name) {
     document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
+// Function to handle cookie consent when 'Accept' button is clicked
 function acceptCookies() {
-    setCookie("consent", "accepted", 365);
-    document.getElementById("cookieConsent").style.display = "none";
+    setCookie("userConsent", "accepted", 365); // Set 'userConsent' cookie for 365 days
+    hideCookieBanner(); // Hide the cookie consent banner
+    loadScripts(); // Load necessary scripts after consent
 }
 
+// Function to handle cookie consent when 'Decline' button is clicked
 function declineCookies() {
-    document.getElementById("cookieConsent").style.display = "none";
+    setCookie("userConsent", "declined", 365); // Set 'userConsent' cookie for 365 days (optional)
+    hideCookieBanner(); // Hide the cookie consent banner
 }
 
-window.onload = function() {
-    if (!getCookie("consent")) {
-        document.getElementById("cookieConsent").style.display = "block";
-    }
-}
-
-function setCookie(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            const expires = "expires=" + date.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-            console.log(`Cookie set: ${name}=${value}; ${expires}; path=/`);
-        }
-
-        function getCookie(name) {
-            const cname = name + "=";
-            const decodedCookie = decodeURIComponent(document.cookie);
-            const ca = decodedCookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(cname) == 0) {
-                    console.log(`Cookie found: ${c.substring(cname.length, c.length)}`);
-                    return c.substring(cname.length, c.length);
-                }
-            }
-            console.log(`Cookie not found: ${name}`);
-            return "";
-        }
-
-        function deleteCookie(name) {
-            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            console.log(`Cookie deleted: ${name}`);
-        }
-
-        function acceptCookies() {
-            setCookie("consent", "accepted", 365);
-            document.getElementById("cookieConsent").style.display = "none";
-        }
-
-        function declineCookies() {
-            document.getElementById("cookieConsent").style.display = "none";
-        }
-
-        window.onload = function() {
-            if (!getCookie("consent")) {
-                document.getElementById("cookieConsent").style.display = "block";
-            }
-        }
-        
-        // Function to check if the user has already consented to cookies
-function checkCookieConsent() {
-    // Check if the "userConsent" cookie exists and has a value of "Accepted"
-    if (getCookie("userConsent") === "Accepted") {
-        hideCookieBanner(); // If cookie exists and is "Accepted", hide the banner
-    }
-}
-
-// Function to retrieve a cookie by name
-function getCookie(name) {
-    const cookieName = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
-
-    for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i].trim();
-        if (cookie.indexOf(cookieName) === 0) {
-            return cookie.substring(cookieName.length, cookie.length);
-        }
-    }
-    return "";
+// Function to check if the user has already consented to cookies
+function hasCookieConsent() {
+    return getCookie("userConsent") === "accepted";
 }
 
 // Function to hide the cookie consent banner
 function hideCookieBanner() {
-    const banner = document.getElementById("cookieConsentBanner");
-    if (banner) {
-        banner.style.display = "none"; // Hide the banner element
+    const cookieConsentBanner = document.getElementById("cookieConsent");
+    if (cookieConsentBanner) {
+        cookieConsentBanner.style.display = "none";
     }
 }
 
-// Function to set the "userConsent" cookie when the user accepts cookies
-function setCookieConsent() {
-    document.cookie = "userConsent=Accepted; max-age=31536000; path=/"; // Set cookie with 1 year expiry
-    hideCookieBanner(); // Hide the banner after setting the cookie
+// Function to load SimpleAnalytics script (example function, adjust as needed)
+function loadSimpleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
+    document.head.appendChild(script);
 }
 
-// Call the function to check cookie consent on page load
-checkCookieConsent();
+// Function to load other necessary scripts (example function, adjust as needed)
+function loadOtherScripts() {
+    // Example: Load scripts that are essential for your website functionality
+    const script1 = document.createElement('script');
+    script1.src = 'scripts.js'; // Example script, adjust as needed
+    document.head.appendChild(script1);
+
+    // Add more scripts as needed
+}
+
+// Function to initialize cookie consent check on page load
+function initializeCookieConsent() {
+    if (!hasCookieConsent()) {
+        const cookieConsentBanner = document.getElementById("cookieConsent");
+        if (cookieConsentBanner) {
+            cookieConsentBanner.style.display = "block";
+        }
+    } else {
+        loadScripts(); // Load necessary scripts if consent already given
+    }
+}
+
+// Function to load scripts based on cookie consent
+function loadScripts() {
+    if (hasCookieConsent()) {
+        loadSimpleAnalytics(); // Load SimpleAnalytics script
+        loadOtherScripts(); // Load other necessary scripts
+    }
+}
+
+// Event listener when DOM content is loaded
+document.addEventListener("DOMContentLoaded", function () {
+    initializeCookieConsent(); // Check and handle cookie consent on page load
+});
+
+// Event listener for 'Accept' button click
+const acceptButton = document.getElementById('acceptCookies');
+if (acceptButton) {
+    acceptButton.addEventListener('click', acceptCookies);
+}
+
+// Event listener for 'Decline' button click
+const declineButton = document.getElementById('declineCookies');
+if (declineButton) {
+    declineButton.addEventListener('click', declineCookies);
+});
