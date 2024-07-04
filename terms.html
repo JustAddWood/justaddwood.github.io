@@ -55,49 +55,6 @@
         <h3>Reservation of Rights</h3>
         <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
     </section>
-    <section class="terms-content">
-        <h2>Data Privacy and Cookie Management</h2>
-        <div class="terms-section">
-          <p>Your privacy is important to us. This section outlines how we collect, use, and protect your personal data in compliance with the General Data Protection Regulation (GDPR).</p>
-      
-          <h3>Consent for Processing Personal Data</h3>
-          <p>We collect consent for processing your personal data in accordance with GDPR requirements. By using our website, you agree to our use of cookies and other tracking technologies as described in this policy. You have the right to withdraw your consent at any time.</p>
-      
-          <h3>Your Rights Under GDPR</h3>
-          <ul>
-            <li><strong>Right to Access:</strong> You have the right to request access to your personal data that we hold.</li>
-            <li><strong>Right to Rectification:</strong> You have the right to request correction of inaccurate or incomplete data.</li>
-            <li><strong>Right to Erasure:</strong> You have the right to request the deletion of your personal data.</li>
-            <li><strong>Right to Restrict Processing:</strong> You have the right to request the restriction of processing your data under certain conditions.</li>
-            <li><strong>Right to Data Portability:</strong> You have the right to request transfer of your data to another service provider.</li>
-            <li><strong>Right to Object:</strong> You have the right to object to the processing of your data.</li>
-          </ul>
-      
-          <h3>Cookie Management</h3>
-          <p>If you wish to withdraw your consent and delete all cookies set by our website, you can do so by clicking the button below. Please note that deleting cookies may affect your browsing experience on our site.</p>
-          <button id="deleteCookies" class="cookie-button">Delete All Cookies</button>
-          
-          <script>
-            function deleteAllCookies() {
-              const cookies = document.cookie.split(";");
-              for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i];
-                const eqPos = cookie.indexOf("=");
-                const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-              }
-              alert("All cookies have been deleted. Please reload the page for the changes to take effect.");
-            }
-      
-            document.getElementById("deleteCookies").addEventListener("click", deleteAllCookies);
-          </script>
-      
-          <h3>Contact Information</h3>
-          <p>If you have any questions or concerns about our privacy practices or if you would like to exercise any of your rights under GDPR, please contact us at:</p>
-          <p class="email-text-color">Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        </div>
-      </section>
-      
     <button id="back-to-top-btn" title="Back to Top">&uarr;</button>
     <footer>
         <p>&copy; 2024 Just Add Wood. All rights reserved.</p>
